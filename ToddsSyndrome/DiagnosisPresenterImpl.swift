@@ -92,52 +92,53 @@ class DiagnosisPresenterImpl: DiagnosisPresenter,TextFieldTableViewCellDelegate,
     
     func onSubmitButtonClicked() {
         //Check if the required fields are entered
-        guard let _ = patientModel.name else {
-            view.showErrorAtSection(0)
-            showErrorForFactorCell(FactorType.NAME)
+        let formValidity = checkForm(patientModel)
+        if let index = formValidity.index {
+            view.showFormInvalidAlert("Incomplete Form", message: "All details are mandatory. You have missed out on \(formValidity.factorType!.rawValue)",handler: { (action) in
+                self.view.showErrorAtSection(index)
+                self.showErrorForFactorCell(formValidity.factorType!)
+            })
             return
+        }
+        
+        //Save data to local storage
+        PatientListDataStoreImpl().saveNewPatient(patientModel)
+        
+        //Show Todds Syndrome , likely percentage
+        view.showToddsSyndromeAlert(patientModel.name!, percentage: patientModel.getChancesOfToddsSyndrome())
+    }
+    
+    //(nil,nil) is returned is it is valid
+    func checkForm(patientModel: PatientModel) -> (index: Int?, factorType: FactorType?) {
+        guard let _ = patientModel.name else {
+            return (0,.NAME)
         }
         
         if patientModel.name!.isEmpty {
-            view.showErrorAtSection(0)
-            showErrorForFactorCell(FactorType.NAME)
-            return
+            return (0,.NAME)
         }
         
         guard let _ = patientModel.dob else {
-            view.showErrorAtSection(1)
-            showErrorForFactorCell(FactorType.DOB)
-            return
+            return (1,.DOB)
+        }
+        
+        if patientModel.dob!.isEmpty {
+            return (1,.DOB)
         }
         
         guard let _ = patientModel.gender else {
-            view.showErrorAtSection(2)
-            showErrorForFactorCell(FactorType.GENDER)
-            return
+            return (2,.GENDER)
         }
         
         guard let _ = patientModel.migranes else {
-            view.showErrorAtSection(3)
-            showErrorForFactorCell(FactorType.MIGRANE)
-            return
+            return (3,.MIGRANE)
         }
         
         guard let _ = patientModel.hallucinogens else {
-            view.showErrorAtSection(4)
-            showErrorForFactorCell(FactorType.HALLUCINOGENS)
-            return
+            return (4,.HALLUCINOGENS)
         }
         
-        //If we are here, it means the form is valid
-        
-        //Save data to local storage 
-        PatientListDataStoreImpl().saveNewPatient(patientModel)
-        
-        //Show Todds Syndrome , likely percentage 
-        
-        
-        //Dismiss VC
-        view.showToddsSyndromeAlert(patientModel.name!, percentage: patientModel.getChancesOfToddsSyndrome())
+        return (nil,nil)
     }
     
     func showErrorForFactorCell(factorType: FactorType) {
@@ -151,16 +152,16 @@ class DiagnosisPresenterImpl: DiagnosisPresenter,TextFieldTableViewCellDelegate,
     
     //MARK:- TextFieldTableViewCellDelegate
     func onTextFieldEdited(editedText: String?, factorType: FactorType) {
-            switch factorType {
-            case .NAME:
-                patientModel.name = editedText
-                break
-            case .DOB:
-                patientModel.dob = editedText
-                break
-            default:
-                break
-            }
+        switch factorType {
+        case .NAME:
+            patientModel.name = editedText
+            break
+        case .DOB:
+            patientModel.dob = editedText
+            break
+        default:
+            break
+        }
     }
     
     //MARK:- TwoButtonTableViewCellDelegate

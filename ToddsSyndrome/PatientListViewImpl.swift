@@ -63,15 +63,15 @@ extension PatientListViewImpl: PatientListView {
     func showEmptyView() {
         let messageLabel = UILabel()
         messageLabel.frame = CGRectMake(0.0, 0.0, self.view.bounds.size.width, self.view.bounds.size.height)
-        messageLabel.text = "Looks like you have no patients saved, start by clicking on + button"
+        messageLabel.text = "Looks like you have no patients saved, start by clicking on the + button"
         messageLabel.textAlignment = NSTextAlignment.Center
         messageLabel.textColor = UIColor.grayColor()
         messageLabel.numberOfLines = 0
         messageLabel.backgroundColor = UIColor.clearColor()
-        messageLabel.font = UIFont(name: "Helvetica", size: 25)
+        messageLabel.font = UIFont(name: "Helvetica", size: 20)
         view.addSubview(messageLabel)
         
-        //Hide table v
+        //Hide table view
         tableView.hidden = true
     }
     

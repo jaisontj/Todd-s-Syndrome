@@ -88,6 +88,13 @@ class TextFieldTableViewCell: FactorCell, UITextFieldDelegate {
         }
     }
     
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if let delegate = self.delegate {
+            delegate.onTextFieldEdited(textField.text, factorType: factorType!)
+        }
+        return true
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.textField.endEditing(true)
         return true

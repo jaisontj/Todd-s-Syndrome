@@ -128,7 +128,7 @@
         <!--Patients-->
         <scene sceneID="zqc-H5-hI7">
             <objects>
-                <viewController id="Fju-kH-u9O" customClass="PatientListViewImpl" customModule="ToddsSyndrome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="patientsListViewController" id="Fju-kH-u9O" customClass="PatientListViewImpl" customModule="ToddsSyndrome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UGb-lM-Qe5"/>
                         <viewControllerLayoutGuide type="bottom" id="Auq-5L-gb5"/>

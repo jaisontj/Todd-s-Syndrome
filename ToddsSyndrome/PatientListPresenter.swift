@@ -39,7 +39,6 @@ class PatientListPresenterImpl: PatientListPresenter, PatientListDataStoreListen
     
     func getCellForRow(tableView: UITableView,indexPath: NSIndexPath) -> UITableViewCell {
         let patientModel = patientList[indexPath.row]
-        
         let cell = tableView.dequeueReusableCellWithIdentifier(PatientListCellIdentifiers.CELL)
         cell?.textLabel?.text = patientModel.name        
         return cell!

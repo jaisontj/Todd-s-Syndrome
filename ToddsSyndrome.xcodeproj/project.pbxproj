@@ -12,7 +12,6 @@
 		DA77C0311D734EC5005F2610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA77C02F1D734EC5005F2610 /* Main.storyboard */; };
 		DA77C0331D734EC5005F2610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA77C0321D734EC5005F2610 /* Assets.xcassets */; };
 		DA77C0361D734EC5005F2610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA77C0341D734EC5005F2610 /* LaunchScreen.storyboard */; };
-		DA77C0411D734EC5005F2610 /* ToddsSyndromeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0401D734EC5005F2610 /* ToddsSyndromeTests.swift */; };
 		DA77C04C1D734EC5005F2610 /* ToddsSyndromeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C04B1D734EC5005F2610 /* ToddsSyndromeUITests.swift */; };
 		DA77C05D1D735154005F2610 /* DiagnosisViewImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C05C1D735154005F2610 /* DiagnosisViewImpl.swift */; };
 		DA77C05F1D7351DB005F2610 /* DiagnosisPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C05E1D7351DB005F2610 /* DiagnosisPresenterImpl.swift */; };
@@ -27,6 +26,7 @@
 		DA77C0781D73ED33005F2610 /* PatientListDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0771D73ED33005F2610 /* PatientListDataStore.swift */; };
 		DA77C07A1D741397005F2610 /* RealmPatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0791D741397005F2610 /* RealmPatientModel.swift */; };
 		DA77C07C1D741AF7005F2610 /* PatientDetailsViewImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C07B1D741AF7005F2610 /* PatientDetailsViewImpl.swift */; };
+		DA77C0831D744ABB005F2610 /* PatientListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0821D744ABB005F2610 /* PatientListViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,6 @@
 		DA77C0351D734EC5005F2610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA77C0371D734EC5005F2610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA77C03C1D734EC5005F2610 /* ToddsSyndromeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToddsSyndromeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA77C0401D734EC5005F2610 /* ToddsSyndromeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToddsSyndromeTests.swift; sourceTree = "<group>"; };
 		DA77C0421D734EC5005F2610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA77C0471D734EC5005F2610 /* ToddsSyndromeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToddsSyndromeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA77C04B1D734EC5005F2610 /* ToddsSyndromeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToddsSyndromeUITests.swift; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		DA77C0771D73ED33005F2610 /* PatientListDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListDataStore.swift; sourceTree = "<group>"; };
 		DA77C0791D741397005F2610 /* RealmPatientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmPatientModel.swift; sourceTree = "<group>"; };
 		DA77C07B1D741AF7005F2610 /* PatientDetailsViewImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDetailsViewImpl.swift; sourceTree = "<group>"; };
+		DA77C0821D744ABB005F2610 /* PatientListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +158,8 @@
 		DA77C03F1D734EC5005F2610 /* ToddsSyndromeTests */ = {
 			isa = PBXGroup;
 			children = (
-				DA77C0401D734EC5005F2610 /* ToddsSyndromeTests.swift */,
 				DA77C0421D734EC5005F2610 /* Info.plist */,
+				DA77C0821D744ABB005F2610 /* PatientListViewControllerTests.swift */,
 			);
 			path = ToddsSyndromeTests;
 			sourceTree = "<group>";
@@ -455,7 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA77C0411D734EC5005F2610 /* ToddsSyndromeTests.swift in Sources */,
+				DA77C0831D744ABB005F2610 /* PatientListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +592,7 @@
 			baseConfigurationReference = 0B80050B3AA706E9FB75BBD4 /* Pods-ToddsSyndrome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = ToddsSyndrome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaison.ToddsSyndrome;
@@ -604,6 +605,7 @@
 			baseConfigurationReference = 5488A364E60B87D336BB925F /* Pods-ToddsSyndrome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = ToddsSyndrome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaison.ToddsSyndrome;
@@ -615,6 +617,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = ToddsSyndromeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaison.ToddsSyndromeTests;
@@ -627,6 +630,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = ToddsSyndromeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaison.ToddsSyndromeTests;

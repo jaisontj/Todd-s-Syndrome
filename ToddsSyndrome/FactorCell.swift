@@ -21,8 +21,9 @@ class FactorCell: UITableViewCell {
         fatalError("To use FactorCell, setUpCell MUST be overridden")
     }
     
+    //Override
     func turnErrorModeOn() {
-        //Override 
+        //Use to show any custom error indicator or animation
     }
         
 }

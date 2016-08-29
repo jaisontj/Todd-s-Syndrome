@@ -13,10 +13,10 @@ enum Gender: String {
     case FEMALE = "Female"
 }
 
-enum FactorType {
-    case NAME
-    case MIGRANE
-    case DOB
-    case GENDER
-    case HALLUCINOGENS
+enum FactorType: String {
+    case NAME = "Name"
+    case MIGRANE = "Migrane"
+    case DOB = "Date Of Birth"
+    case GENDER = "Gender"
+    case HALLUCINOGENS = "Hallucinogens"
 }

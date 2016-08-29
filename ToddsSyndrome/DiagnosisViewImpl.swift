@@ -12,6 +12,7 @@ protocol DiagnosisView {
     func showErrorAtSection(section: Int)
     func hideKeyboard()
     func showToddsSyndromeAlert(patientName: String,percentage: Int)
+    func showFormInvalidAlert(title: String, message: String, handler: ((UIAlertAction) -> Void)?)
 }
 
 class DiagnosisViewImpl: UITableViewController {
@@ -74,6 +75,12 @@ extension DiagnosisViewImpl: DiagnosisView {
         alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Cancel, handler: { (action) in
             self.dismissView()
         }))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func showFormInvalidAlert(title: String, message: String, handler: ((UIAlertAction) -> Void)?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Cancel, handler: handler))
         self.presentViewController(alert, animated: true, completion: nil)
     }
 }

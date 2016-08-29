@@ -24,3 +24,7 @@ struct SegueIdentifiers {
     static let PATIENTDETAILS = "showsDetailedPatientView"
     static let ADDNEWPATIENT = "showsAddPatient"
 }
+
+struct ViewControllerIdentifiers {
+    static let PatientList = "patientsListViewController"
+}
