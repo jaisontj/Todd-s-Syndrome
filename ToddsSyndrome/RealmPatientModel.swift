@@ -16,13 +16,13 @@ class RealmPatientModel: Object {
     dynamic var gender: String?
     
     var hallucinogens = RealmOptional<Bool>()
-    var migranes = RealmOptional<Bool>()
+    var migraines = RealmOptional<Bool>()
     
     func setData(patientModel: PatientModel) {
         name = patientModel.name
         dob = patientModel.dob
         gender = patientModel.gender
         hallucinogens.value = patientModel.hallucinogens
-        migranes.value = patientModel.migranes
+        migraines.value = patientModel.migraines
     }
 }

@@ -38,7 +38,7 @@ class PatientDetailsViewImpl: UITableViewController {
             break
         case 3:
             cell.textLabel?.text = "Migranes"
-            cell.detailTextLabel?.text = patientDetails.migranes! ? "Yes" : "No"
+            cell.detailTextLabel?.text = patientDetails.migraines! ? "Yes" : "No"
             break
         case 4:
             cell.textLabel?.text = "Hallucinogens"

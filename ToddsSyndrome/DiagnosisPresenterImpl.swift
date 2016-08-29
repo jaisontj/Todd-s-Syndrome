@@ -130,7 +130,7 @@ class DiagnosisPresenterImpl: DiagnosisPresenter,TextFieldTableViewCellDelegate,
             return (2,.GENDER)
         }
         
-        guard let _ = patientModel.migranes else {
+        guard let _ = patientModel.migraines else {
             return (3,.MIGRANE)
         }
         
@@ -171,7 +171,7 @@ class DiagnosisPresenterImpl: DiagnosisPresenter,TextFieldTableViewCellDelegate,
             patientModel.gender = selectedLabelString
             break
         case .MIGRANE:
-            patientModel.migranes = getBoolFromString(selectedLabelString)
+            patientModel.migraines = getBoolFromString(selectedLabelString)
             break
         case .HALLUCINOGENS:
             patientModel.hallucinogens = getBoolFromString(selectedLabelString)

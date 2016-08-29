@@ -23,7 +23,6 @@ class PatientListDataStoreImpl: PatientListDataStore {
     // Get the default Realm
     let realm = try! Realm()
     
-    
     func getSavedPatients(listener : PatientListDataStoreListener){
         let realmPatients = realm.objects(RealmPatientModel.self)
         var patients = [PatientModel]()

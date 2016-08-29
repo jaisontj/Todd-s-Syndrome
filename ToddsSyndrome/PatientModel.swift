@@ -16,7 +16,7 @@ class PatientModel {
     
     //Other Specific Details
     var hallucinogens: Bool?
-    var migranes: Bool?
+    var migraines: Bool?
     
     init() {
         
@@ -26,7 +26,7 @@ class PatientModel {
         self.name = realmPatientDetails.name
         self.dob = realmPatientDetails.dob
         self.gender = realmPatientDetails.gender
-        self.migranes = realmPatientDetails.migranes.value
+        self.migraines = realmPatientDetails.migraines.value
         self.hallucinogens = realmPatientDetails.hallucinogens.value
     }
     
@@ -55,7 +55,7 @@ class PatientModel {
     func getChancesOfToddsSyndrome() -> Int {
         var chances = 0
         
-        if (migranes!) {
+        if (migraines!) {
             chances += getWeightForFactor()
         }
         
