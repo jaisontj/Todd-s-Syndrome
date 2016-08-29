@@ -15,3 +15,12 @@ struct FormCellIdentifiers {
 struct PatientListCellIdentifiers {
     static let CELL = "patientListCell"
 }
+
+struct PatientDetailsCellIdentifiers {
+    static let DETAILCELL = "patientDetailCell"
+}
+
+struct SegueIdentifiers {
+    static let PATIENTDETAILS = "showsDetailedPatientView"
+    static let ADDNEWPATIENT = "showsAddPatient"
+}

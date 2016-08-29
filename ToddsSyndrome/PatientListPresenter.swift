@@ -13,6 +13,7 @@ protocol PatientListPresenter {
     func getNumberOfRows() -> Int
     func getCellForRow(tableView: UITableView,indexPath: NSIndexPath) -> UITableViewCell
     func viewDidAppear()
+    func didSelectRow(indexpath: NSIndexPath)
 }
 
 class PatientListPresenterImpl: PatientListPresenter, PatientListDataStoreListener {
@@ -23,12 +24,11 @@ class PatientListPresenterImpl: PatientListPresenter, PatientListDataStoreListen
     
     init(view: PatientListView) {
         self.view = view
-        self.dataStore = PatientListDataStoreImpl(listener: self)
+        self.dataStore = PatientListDataStoreImpl()
     }
     
     func viewDidAppear() {
-        dataStore.getSavedPatients()
-        view.showProgressIndicator()
+        dataStore.getSavedPatients(self)
     }
     
     //MARK: - UITableView Methods
@@ -41,10 +41,12 @@ class PatientListPresenterImpl: PatientListPresenter, PatientListDataStoreListen
         let patientModel = patientList[indexPath.row]
         
         let cell = tableView.dequeueReusableCellWithIdentifier(PatientListCellIdentifiers.CELL)
-        cell?.textLabel?.text = patientModel.name
-        cell?.detailTextLabel?.text = "\(patientModel.getChancesOfToddsSyndrome())"
-        
+        cell?.textLabel?.text = patientModel.name        
         return cell!
+    }
+    
+    func didSelectRow(indexpath: NSIndexPath) {
+        view.navigateToPatientDetailsView(patientList[indexpath.row])
     }
     
     //MARK: - DATA STORE
@@ -52,7 +54,6 @@ class PatientListPresenterImpl: PatientListPresenter, PatientListDataStoreListen
     func onSavedPatientDetailsArrived(patientList: [PatientModel]) {
         self.patientList = patientList
         view.reloadTableView()
-        view.hideProgressIndicator()
         //Check if empty
         if patientList.count == 0 {
             view.showEmptyView()

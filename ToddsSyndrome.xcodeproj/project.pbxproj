@@ -25,6 +25,8 @@
 		DA77C0741D73EB34005F2610 /* PatientListViewImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0731D73EB34005F2610 /* PatientListViewImpl.swift */; };
 		DA77C0761D73EC2C005F2610 /* PatientListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0751D73EC2C005F2610 /* PatientListPresenter.swift */; };
 		DA77C0781D73ED33005F2610 /* PatientListDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0771D73ED33005F2610 /* PatientListDataStore.swift */; };
+		DA77C07A1D741397005F2610 /* RealmPatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0791D741397005F2610 /* RealmPatientModel.swift */; };
+		DA77C07C1D741AF7005F2610 /* PatientDetailsViewImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C07B1D741AF7005F2610 /* PatientDetailsViewImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		DA77C0731D73EB34005F2610 /* PatientListViewImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListViewImpl.swift; sourceTree = "<group>"; };
 		DA77C0751D73EC2C005F2610 /* PatientListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListPresenter.swift; sourceTree = "<group>"; };
 		DA77C0771D73ED33005F2610 /* PatientListDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListDataStore.swift; sourceTree = "<group>"; };
+		DA77C0791D741397005F2610 /* RealmPatientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmPatientModel.swift; sourceTree = "<group>"; };
+		DA77C07B1D741AF7005F2610 /* PatientDetailsViewImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDetailsViewImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +150,7 @@
 				DA77C05A1D7350EF005F2610 /* View */,
 				DA77C0591D7350D8005F2610 /* Model */,
 				DA77C0621D735CE1005F2610 /* Supporting Files */,
-				DA77C0601D735CA8005F2610 /* Constants.swift */,
-				DA77C0681D7360E5005F2610 /* Enums.swift */,
+				DA77C07F1D741C67005F2610 /* Helper */,
 			);
 			path = ToddsSyndrome;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			children = (
 				DA77C0641D735EDE005F2610 /* PatientModel.swift */,
 				DA77C0771D73ED33005F2610 /* PatientListDataStore.swift */,
+				DA77C0791D741397005F2610 /* RealmPatientModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -182,11 +186,8 @@
 		DA77C05A1D7350EF005F2610 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DA77C05C1D735154005F2610 /* DiagnosisViewImpl.swift */,
-				DA77C06A1D7364E0005F2610 /* TextFieldTableViewCell.swift */,
-				DA77C06C1D736546005F2610 /* TwoButtonTableViewCell.swift */,
-				DA77C0711D736F25005F2610 /* FactorCell.swift */,
-				DA77C0731D73EB34005F2610 /* PatientListViewImpl.swift */,
+				DA77C07E1D741BD0005F2610 /* ViewController */,
+				DA77C07D1D741BBC005F2610 /* TableViewCell */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -217,6 +218,35 @@
 				DA77C02F1D734EC5005F2610 /* Main.storyboard */,
 			);
 			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		DA77C07D1D741BBC005F2610 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA77C06A1D7364E0005F2610 /* TextFieldTableViewCell.swift */,
+				DA77C06C1D736546005F2610 /* TwoButtonTableViewCell.swift */,
+				DA77C0711D736F25005F2610 /* FactorCell.swift */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		DA77C07E1D741BD0005F2610 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA77C05C1D735154005F2610 /* DiagnosisViewImpl.swift */,
+				DA77C0731D73EB34005F2610 /* PatientListViewImpl.swift */,
+				DA77C07B1D741AF7005F2610 /* PatientDetailsViewImpl.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		DA77C07F1D741C67005F2610 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DA77C0601D735CA8005F2610 /* Constants.swift */,
+				DA77C0681D7360E5005F2610 /* Enums.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA77C0761D73EC2C005F2610 /* PatientListPresenter.swift in Sources */,
+				DA77C07C1D741AF7005F2610 /* PatientDetailsViewImpl.swift in Sources */,
 				DA77C0781D73ED33005F2610 /* PatientListDataStore.swift in Sources */,
 				DA77C06D1D736546005F2610 /* TwoButtonTableViewCell.swift in Sources */,
 				DA77C05F1D7351DB005F2610 /* DiagnosisPresenterImpl.swift in Sources */,
@@ -412,6 +443,7 @@
 				DA77C06B1D7364E0005F2610 /* TextFieldTableViewCell.swift in Sources */,
 				DA77C0721D736F25005F2610 /* FactorCell.swift in Sources */,
 				DA77C0611D735CA8005F2610 /* Constants.swift in Sources */,
+				DA77C07A1D741397005F2610 /* RealmPatientModel.swift in Sources */,
 				DA77C02A1D734EC5005F2610 /* AppDelegate.swift in Sources */,
 				DA77C0741D73EB34005F2610 /* PatientListViewImpl.swift in Sources */,
 				DA77C0691D7360E5005F2610 /* Enums.swift in Sources */,

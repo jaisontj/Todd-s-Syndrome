@@ -39,13 +39,43 @@ class TextFieldTableViewCell: FactorCell, UITextFieldDelegate {
         datePickerView.datePickerMode = UIDatePickerMode.Date
         textField.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(TextFieldTableViewCell.handleDatePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.Default
+        toolBar.translucent = true
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(TextFieldTableViewCell.donePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(TextFieldTableViewCell.cancelPicker))
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        textField.inputAccessoryView = toolBar
+    }
+    
+    func donePicker() {
+        if textField.text!.isEmpty {
+            setDateToTextField(NSDate())
+        }
+        
+        self.textField.endEditing(true)
+    }
+    
+    func cancelPicker() {
+        self.textField.endEditing(true)
     }
     
     func handleDatePicker(sender: UIDatePicker) {
+        setDateToTextField(sender.date)
+    }
+    
+    private func setDateToTextField(date: NSDate) {
         let timeFormatter = NSDateFormatter()
         timeFormatter.dateStyle = .LongStyle
         timeFormatter.timeStyle = .NoStyle
-        textField.text = timeFormatter.stringFromDate(sender.date)
+        textField.text = timeFormatter.stringFromDate(date)
     }
     
     func setTextFieldPlaceholder(placeHolder: String) {
@@ -56,6 +86,11 @@ class TextFieldTableViewCell: FactorCell, UITextFieldDelegate {
         if let delegate = self.delegate {
             delegate.onTextFieldEdited(textField.text, factorType: factorType!)
         }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.textField.endEditing(true)
+        return true
     }
     
     override func turnErrorModeOn() {

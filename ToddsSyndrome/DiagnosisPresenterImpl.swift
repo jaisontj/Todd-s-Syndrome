@@ -131,10 +131,13 @@ class DiagnosisPresenterImpl: DiagnosisPresenter,TextFieldTableViewCellDelegate,
         //If we are here, it means the form is valid
         
         //Save data to local storage 
+        PatientListDataStoreImpl().saveNewPatient(patientModel)
+        
+        //Show Todds Syndrome , likely percentage 
         
         
         //Dismiss VC
-        view.dismissView()
+        view.showToddsSyndromeAlert(patientModel.name!, percentage: patientModel.getChancesOfToddsSyndrome())
     }
     
     func showErrorForFactorCell(factorType: FactorType) {

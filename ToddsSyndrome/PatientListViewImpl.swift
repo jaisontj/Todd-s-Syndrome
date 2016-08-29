@@ -11,22 +11,17 @@ import UIKit
 protocol PatientListView {
     func reloadTableView()
     func showEmptyView()
-    func showProgressIndicator()
-    func hideProgressIndicator()
+    func navigateToPatientDetailsView(patientDetails: PatientModel)
 }
 
 class PatientListViewImpl: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var refreshControl: UIRefreshControl!
     var presenter: PatientListPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Adding refresh control 
-        addRefreshControl()
         
         self.presenter = PatientListPresenterImpl(view: self)
 
@@ -34,16 +29,6 @@ class PatientListViewImpl: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-    }
-    
-    private func addRefreshControl() {
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl.addTarget(self, action: #selector(PatientListViewImpl.refreshData), forControlEvents: UIControlEvents.ValueChanged)
-        self.tableView.addSubview(refreshControl)
-    }
-    
-    func refreshData() {
-        self.refreshControl.endRefreshing()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -60,6 +45,10 @@ extension PatientListViewImpl: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         return presenter.getCellForRow(tableView, indexPath: indexPath)
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        presenter.didSelectRow(indexPath)
     }
     
 }
@@ -86,12 +75,16 @@ extension PatientListViewImpl: PatientListView {
         tableView.hidden = true
     }
     
-    func showProgressIndicator() {
-        self.refreshControl.beginRefreshing()
+    func navigateToPatientDetailsView(patientDetails: PatientModel) {
+        self.performSegueWithIdentifier(SegueIdentifiers.PATIENTDETAILS, sender: patientDetails)
     }
     
-    func hideProgressIndicator() {
-        self.refreshControl.endRefreshing()
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let patientDetails = sender as? PatientModel {
+            if let destinationVC = segue.destinationViewController as? PatientDetailsViewImpl {
+                destinationVC.patientDetails = patientDetails
+            }
+        }
     }
 
 }

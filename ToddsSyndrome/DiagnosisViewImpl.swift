@@ -11,7 +11,7 @@ import UIKit
 protocol DiagnosisView {
     func showErrorAtSection(section: Int)
     func hideKeyboard()
-    func dismissView()
+    func showToddsSyndromeAlert(patientName: String,percentage: Int)
 }
 
 class DiagnosisViewImpl: UITableViewController {
@@ -48,7 +48,7 @@ class DiagnosisViewImpl: UITableViewController {
     }
 
     @IBAction func onCancelButtonClicked(sender: UIBarButtonItem) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     
@@ -65,7 +65,15 @@ extension DiagnosisViewImpl: DiagnosisView {
     }
     
     func dismissView() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
+    func showToddsSyndromeAlert(patientName: String,percentage: Int) {
+        let message = "\(patientName) has a \(percentage)% chance of having Todds Syndrome"
+        let alert = UIAlertController(title: "Diagnosis", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Cancel, handler: { (action) in
+            self.dismissView()
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 }

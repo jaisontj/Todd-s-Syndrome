@@ -18,6 +18,18 @@ class PatientModel {
     var hallucinogens: Bool?
     var migranes: Bool?
     
+    init() {
+        
+    }
+    
+    init(realmPatientDetails: RealmPatientModel) {
+        self.name = realmPatientDetails.name
+        self.dob = realmPatientDetails.dob
+        self.gender = realmPatientDetails.gender
+        self.migranes = realmPatientDetails.migranes.value
+        self.hallucinogens = realmPatientDetails.hallucinogens.value
+    }
+    
     var age: Int? {
         get {
             let ageComponents = NSCalendar.currentCalendar().components(.Year,fromDate: getDateFromDobString(),toDate: NSDate(),options: [])
