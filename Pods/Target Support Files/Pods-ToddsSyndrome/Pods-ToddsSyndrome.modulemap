@@ -1,0 +1,6 @@
+framework module Pods_ToddsSyndrome {
+  umbrella header "Pods-ToddsSyndrome-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F89D63DB0C7B03737BB37F8 /* Pods_ToddsSyndrome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8452F4A940991366A5D9788 /* Pods_ToddsSyndrome.framework */; };
 		DA77C02A1D734EC5005F2610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0291D734EC5005F2610 /* AppDelegate.swift */; };
-		DA77C02C1D734EC5005F2610 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C02B1D734EC5005F2610 /* FirstViewController.swift */; };
-		DA77C02E1D734EC5005F2610 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C02D1D734EC5005F2610 /* SecondViewController.swift */; };
 		DA77C0311D734EC5005F2610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA77C02F1D734EC5005F2610 /* Main.storyboard */; };
 		DA77C0331D734EC5005F2610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA77C0321D734EC5005F2610 /* Assets.xcassets */; };
 		DA77C0361D734EC5005F2610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA77C0341D734EC5005F2610 /* LaunchScreen.storyboard */; };
 		DA77C0411D734EC5005F2610 /* ToddsSyndromeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0401D734EC5005F2610 /* ToddsSyndromeTests.swift */; };
 		DA77C04C1D734EC5005F2610 /* ToddsSyndromeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C04B1D734EC5005F2610 /* ToddsSyndromeUITests.swift */; };
+		DA77C05D1D735154005F2610 /* DiagnosisViewImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C05C1D735154005F2610 /* DiagnosisViewImpl.swift */; };
+		DA77C05F1D7351DB005F2610 /* DiagnosisPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C05E1D7351DB005F2610 /* DiagnosisPresenterImpl.swift */; };
+		DA77C0611D735CA8005F2610 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0601D735CA8005F2610 /* Constants.swift */; };
+		DA77C0651D735EDE005F2610 /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0641D735EDE005F2610 /* PatientModel.swift */; };
+		DA77C0691D7360E5005F2610 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0681D7360E5005F2610 /* Enums.swift */; };
+		DA77C06B1D7364E0005F2610 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C06A1D7364E0005F2610 /* TextFieldTableViewCell.swift */; };
+		DA77C06D1D736546005F2610 /* TwoButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C06C1D736546005F2610 /* TwoButtonTableViewCell.swift */; };
+		DA77C0721D736F25005F2610 /* FactorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0711D736F25005F2610 /* FactorCell.swift */; };
+		DA77C0741D73EB34005F2610 /* PatientListViewImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0731D73EB34005F2610 /* PatientListViewImpl.swift */; };
+		DA77C0761D73EC2C005F2610 /* PatientListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0751D73EC2C005F2610 /* PatientListPresenter.swift */; };
+		DA77C0781D73ED33005F2610 /* PatientListDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77C0771D73ED33005F2610 /* PatientListDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B80050B3AA706E9FB75BBD4 /* Pods-ToddsSyndrome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToddsSyndrome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToddsSyndrome/Pods-ToddsSyndrome.debug.xcconfig"; sourceTree = "<group>"; };
+		5488A364E60B87D336BB925F /* Pods-ToddsSyndrome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToddsSyndrome.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToddsSyndrome/Pods-ToddsSyndrome.release.xcconfig"; sourceTree = "<group>"; };
+		D8452F4A940991366A5D9788 /* Pods_ToddsSyndrome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToddsSyndrome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA77C0261D734EC5005F2610 /* ToddsSyndrome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToddsSyndrome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA77C0291D734EC5005F2610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA77C02B1D734EC5005F2610 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DA77C02D1D734EC5005F2610 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DA77C0301D734EC5005F2610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA77C0321D734EC5005F2610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA77C0351D734EC5005F2610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +60,17 @@
 		DA77C0471D734EC5005F2610 /* ToddsSyndromeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToddsSyndromeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA77C04B1D734EC5005F2610 /* ToddsSyndromeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToddsSyndromeUITests.swift; sourceTree = "<group>"; };
 		DA77C04D1D734EC5005F2610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA77C05C1D735154005F2610 /* DiagnosisViewImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosisViewImpl.swift; sourceTree = "<group>"; };
+		DA77C05E1D7351DB005F2610 /* DiagnosisPresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosisPresenterImpl.swift; sourceTree = "<group>"; };
+		DA77C0601D735CA8005F2610 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DA77C0641D735EDE005F2610 /* PatientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
+		DA77C0681D7360E5005F2610 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		DA77C06A1D7364E0005F2610 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		DA77C06C1D736546005F2610 /* TwoButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoButtonTableViewCell.swift; sourceTree = "<group>"; };
+		DA77C0711D736F25005F2610 /* FactorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactorCell.swift; sourceTree = "<group>"; };
+		DA77C0731D73EB34005F2610 /* PatientListViewImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListViewImpl.swift; sourceTree = "<group>"; };
+		DA77C0751D73EC2C005F2610 /* PatientListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListPresenter.swift; sourceTree = "<group>"; };
+		DA77C0771D73ED33005F2610 /* PatientListDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F89D63DB0C7B03737BB37F8 /* Pods_ToddsSyndrome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +99,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		680FCA75D1818454673F1BD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8452F4A940991366A5D9788 /* Pods_ToddsSyndrome.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DD1822161D7CBE5428F86A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B80050B3AA706E9FB75BBD4 /* Pods-ToddsSyndrome.debug.xcconfig */,
+				5488A364E60B87D336BB925F /* Pods-ToddsSyndrome.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DA77C01D1D734EC5005F2610 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				DA77C03F1D734EC5005F2610 /* ToddsSyndromeTests */,
 				DA77C04A1D734EC5005F2610 /* ToddsSyndromeUITests */,
 				DA77C0271D734EC5005F2610 /* Products */,
+				6DD1822161D7CBE5428F86A3 /* Pods */,
+				680FCA75D1818454673F1BD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +141,13 @@
 		DA77C0281D734EC5005F2610 /* ToddsSyndrome */ = {
 			isa = PBXGroup;
 			children = (
-				DA77C0291D734EC5005F2610 /* AppDelegate.swift */,
-				DA77C02B1D734EC5005F2610 /* FirstViewController.swift */,
-				DA77C02D1D734EC5005F2610 /* SecondViewController.swift */,
-				DA77C02F1D734EC5005F2610 /* Main.storyboard */,
-				DA77C0321D734EC5005F2610 /* Assets.xcassets */,
-				DA77C0341D734EC5005F2610 /* LaunchScreen.storyboard */,
-				DA77C0371D734EC5005F2610 /* Info.plist */,
+				DA77C0631D735CF4005F2610 /* Storyboard */,
+				DA77C05B1D7350FA005F2610 /* Presenter */,
+				DA77C05A1D7350EF005F2610 /* View */,
+				DA77C0591D7350D8005F2610 /* Model */,
+				DA77C0621D735CE1005F2610 /* Supporting Files */,
+				DA77C0601D735CA8005F2610 /* Constants.swift */,
+				DA77C0681D7360E5005F2610 /* Enums.swift */,
 			);
 			path = ToddsSyndrome;
 			sourceTree = "<group>";
@@ -128,6 +170,55 @@
 			path = ToddsSyndromeUITests;
 			sourceTree = "<group>";
 		};
+		DA77C0591D7350D8005F2610 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA77C0641D735EDE005F2610 /* PatientModel.swift */,
+				DA77C0771D73ED33005F2610 /* PatientListDataStore.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DA77C05A1D7350EF005F2610 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA77C05C1D735154005F2610 /* DiagnosisViewImpl.swift */,
+				DA77C06A1D7364E0005F2610 /* TextFieldTableViewCell.swift */,
+				DA77C06C1D736546005F2610 /* TwoButtonTableViewCell.swift */,
+				DA77C0711D736F25005F2610 /* FactorCell.swift */,
+				DA77C0731D73EB34005F2610 /* PatientListViewImpl.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DA77C05B1D7350FA005F2610 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DA77C05E1D7351DB005F2610 /* DiagnosisPresenterImpl.swift */,
+				DA77C0751D73EC2C005F2610 /* PatientListPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		DA77C0621D735CE1005F2610 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA77C0291D734EC5005F2610 /* AppDelegate.swift */,
+				DA77C0321D734EC5005F2610 /* Assets.xcassets */,
+				DA77C0371D734EC5005F2610 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA77C0631D735CF4005F2610 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DA77C0341D734EC5005F2610 /* LaunchScreen.storyboard */,
+				DA77C02F1D734EC5005F2610 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA77C0501D734EC5005F2610 /* Build configuration list for PBXNativeTarget "ToddsSyndrome" */;
 			buildPhases = (
+				82E1949FA4C96F33141E6C61 /* [CP] Check Pods Manifest.lock */,
 				DA77C0221D734EC5005F2610 /* Sources */,
 				DA77C0231D734EC5005F2610 /* Frameworks */,
 				DA77C0241D734EC5005F2610 /* Resources */,
+				CC035B1F1D63DDE088A56019 /* [CP] Embed Pods Frameworks */,
+				569BF65C184B11EC56B0A919 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,14 +351,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		569BF65C184B11EC56B0A919 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToddsSyndrome/Pods-ToddsSyndrome-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82E1949FA4C96F33141E6C61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC035B1F1D63DDE088A56019 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToddsSyndrome/Pods-ToddsSyndrome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DA77C0221D734EC5005F2610 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA77C02E1D734EC5005F2610 /* SecondViewController.swift in Sources */,
+				DA77C0761D73EC2C005F2610 /* PatientListPresenter.swift in Sources */,
+				DA77C0781D73ED33005F2610 /* PatientListDataStore.swift in Sources */,
+				DA77C06D1D736546005F2610 /* TwoButtonTableViewCell.swift in Sources */,
+				DA77C05F1D7351DB005F2610 /* DiagnosisPresenterImpl.swift in Sources */,
+				DA77C05D1D735154005F2610 /* DiagnosisViewImpl.swift in Sources */,
+				DA77C06B1D7364E0005F2610 /* TextFieldTableViewCell.swift in Sources */,
+				DA77C0721D736F25005F2610 /* FactorCell.swift in Sources */,
+				DA77C0611D735CA8005F2610 /* Constants.swift in Sources */,
 				DA77C02A1D734EC5005F2610 /* AppDelegate.swift in Sources */,
-				DA77C02C1D734EC5005F2610 /* FirstViewController.swift in Sources */,
+				DA77C0741D73EB34005F2610 /* PatientListViewImpl.swift in Sources */,
+				DA77C0691D7360E5005F2610 /* Enums.swift in Sources */,
+				DA77C0651D735EDE005F2610 /* PatientModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +557,7 @@
 		};
 		DA77C0511D734EC5005F2610 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B80050B3AA706E9FB75BBD4 /* Pods-ToddsSyndrome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ToddsSyndrome/Info.plist;
@@ -417,6 +569,7 @@
 		};
 		DA77C0521D734EC5005F2610 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5488A364E60B87D336BB925F /* Pods-ToddsSyndrome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ToddsSyndrome/Info.plist;
@@ -491,6 +644,7 @@
 				DA77C0521D734EC5005F2610 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA77C0531D734EC5005F2610 /* Build configuration list for PBXNativeTarget "ToddsSyndromeTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +653,7 @@
 				DA77C0551D734EC5005F2610 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA77C0561D734EC5005F2610 /* Build configuration list for PBXNativeTarget "ToddsSyndromeUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +662,7 @@
 				DA77C0581D734EC5005F2610 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
