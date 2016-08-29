@@ -11,12 +11,14 @@ import UIKit
 protocol PatientListView {
     func reloadTableView()
     func showEmptyView()
+    func hideEmptyView()
     func navigateToPatientDetailsView(patientDetails: PatientModel)
 }
 
 class PatientListViewImpl: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    let messageLabel = UILabel()
     
     var presenter: PatientListPresenter!
 
@@ -60,8 +62,11 @@ extension PatientListViewImpl: PatientListView {
         tableView.hidden = false
     }
     
+    func hideEmptyView() {
+        messageLabel.removeFromSuperview()
+    }
+    
     func showEmptyView() {
-        let messageLabel = UILabel()
         messageLabel.frame = CGRectMake(0.0, 0.0, self.view.bounds.size.width, self.view.bounds.size.height)
         messageLabel.text = "Looks like you have no patients saved, start by clicking on the + button"
         messageLabel.textAlignment = NSTextAlignment.Center

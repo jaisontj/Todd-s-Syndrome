@@ -56,6 +56,8 @@ class PatientListPresenterImpl: PatientListPresenter, PatientListDataStoreListen
         //Check if empty
         if patientList.count == 0 {
             view.showEmptyView()
+        } else {
+         view.hideEmptyView()
         }
         
     }
