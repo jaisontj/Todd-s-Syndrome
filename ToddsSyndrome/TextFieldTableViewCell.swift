@@ -37,6 +37,7 @@ class TextFieldTableViewCell: FactorCell, UITextFieldDelegate {
     private func setInputTypeToDatePicker() {
         let datePickerView  : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.Date
+        datePickerView.maximumDate = NSDate()
         textField.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(TextFieldTableViewCell.handleDatePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
         
